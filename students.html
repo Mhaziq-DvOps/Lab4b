@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book display details</title>
+</head>
+<body>
+    <h1>Book details display by console</h1>
+    <i>Open the console (Inspect>console) to view the book detail</i>
+    <script>
+        const data={
+            "book":[
+                {
+                    "title":"The great gatsby",
+                    "author":"F.Scott Fitzgerald",
+                    "publication_year":1925,
+                    "genres":["Fiction","Classics"]
+                },
+                {
+                    "title":"To kill a Mockingbird",
+                    "author":"Harper Lee",
+                    "publication_year":1960,
+                    "genres":["Fiction","Coming-of-Age"]
+                }
+            ]
+        };
+
+        //a) To display the tile of the first book
+        console.log(data.book[0].title);
+
+        //author of second book
+
+        console.log(data.book[1].author);
+        
+        //the genre of all books 
+
+        console.log("Genres of all books:");
+        data.book.forEach((book, index) => {
+            console.log(`Book ${index + 1}: ${book.genres.join(", ")}`);
+        });
+
+    </script>
+</body>
+</html>
